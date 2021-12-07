@@ -7,8 +7,7 @@ let setupInput = function (conn) {
   stdin.resume();
 
   let handleUserInput = function (key) {
-    // console.log('test');
-    console.log(key);
+    // console.log(key);
     // your code here
     if (key === '\u0003') {
       process.exit();
@@ -20,6 +19,9 @@ let setupInput = function (conn) {
       conn.write('Move: down');
     } else if (key === 'd') {
       conn.write('Move: right');
+    } else if (key === 'z') {
+      // console.log('Type Key');
+      conn.write('Say: Hello');
     }
   };
 
